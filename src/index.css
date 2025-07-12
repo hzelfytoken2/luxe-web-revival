@@ -4,64 +4,64 @@
 @tailwind components;
 @tailwind utilities;
 
-/* High-Contrast Black & White Design System - Afinis Caftan */
+/* Luxury Moroccan Fashion Design System */
 
 @layer base {
   :root {
-    /* Core Monochrome Palette */
-    --background: 0 0% 100%;
-    --foreground: 0 0% 0%;
+    /* Core Brand Colors - Luxury Moroccan Palette */
+    --background: 41 44% 98%;
+    --foreground: 220 91% 8%;
 
     --card: 0 0% 100%;
-    --card-foreground: 0 0% 0%;
+    --card-foreground: 220 91% 8%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 0%;
+    --popover-foreground: 220 91% 8%;
 
-    /* Primary: Pure Black */
-    --primary: 0 0% 0%;
-    --primary-foreground: 0 0% 100%;
-    --primary-light: 0 0% 20%;
-    --primary-dark: 0 0% 0%;
+    /* Primary: Deep Royal Blue */
+    --primary: 220 91% 18%;
+    --primary-foreground: 41 44% 98%;
+    --primary-light: 220 75% 35%;
+    --primary-dark: 220 100% 12%;
 
-    /* Secondary: Dark Gray */
-    --secondary: 0 0% 20%;
-    --secondary-foreground: 0 0% 100%;
-    --secondary-light: 0 0% 40%;
-    --secondary-dark: 0 0% 10%;
+    /* Secondary: Luxury Gold */
+    --secondary: 43 74% 49%;
+    --secondary-foreground: 220 91% 8%;
+    --secondary-light: 45 86% 62%;
+    --secondary-dark: 40 65% 38%;
 
-    /* Accent: Medium Gray */
-    --accent: 0 0% 96%;
-    --accent-foreground: 0 0% 0%;
-    --accent-light: 0 0% 98%;
+    /* Accent: Rich Burgundy */
+    --accent: 345 100% 25%;
+    --accent-foreground: 41 44% 98%;
+    --accent-light: 345 85% 40%;
 
     /* Neutral Tones */
-    --muted: 0 0% 96%;
-    --muted-foreground: 0 0% 40%;
+    --muted: 41 20% 94%;
+    --muted-foreground: 220 20% 45%;
 
-    --cream: 0 0% 100%;
-    --warm-gray: 0 0% 85%;
-    --deep-gray: 0 0% 20%;
+    --cream: 41 44% 98%;
+    --warm-gray: 35 12% 85%;
+    --deep-gray: 220 15% 25%;
 
     /* System Colors */
-    --destructive: 0 0% 20%;
-    --destructive-foreground: 0 0% 100%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 40% 98%;
 
-    --border: 0 0% 87%;
-    --input: 0 0% 87%;
-    --ring: 0 0% 0%;
+    --border: 35 20% 88%;
+    --input: 35 20% 88%;
+    --ring: 220 91% 18%;
 
     --radius: 0.75rem;
 
-    /* Monochrome Gradients */
+    /* Luxury Gradients */
     --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-light)));
     --gradient-secondary: linear-gradient(135deg, hsl(var(--secondary)), hsl(var(--secondary-light)));
-    --gradient-hero: linear-gradient(135deg, hsl(var(--primary) / 0.9), hsl(var(--secondary) / 0.8));
-    --gradient-gray: linear-gradient(90deg, hsl(var(--secondary-dark)), hsl(var(--secondary)), hsl(var(--secondary-light)));
+    --gradient-hero: linear-gradient(135deg, hsl(var(--primary) / 0.9), hsl(var(--accent) / 0.8));
+    --gradient-gold: linear-gradient(90deg, hsl(var(--secondary-dark)), hsl(var(--secondary)), hsl(var(--secondary-light)));
     
-    /* Elegant Monochrome Shadows */
-    --shadow-luxury: 0 25px 50px -12px hsl(var(--primary) / 0.15);
-    --shadow-gray: 0 20px 40px -10px hsl(var(--secondary) / 0.2);
+    /* Elegant Shadows */
+    --shadow-luxury: 0 25px 50px -12px hsl(var(--primary) / 0.25);
+    --shadow-gold: 0 20px 40px -10px hsl(var(--secondary) / 0.3);
     --shadow-soft: 0 10px 30px -5px hsl(var(--deep-gray) / 0.1);
     
     /* Smooth Transitions */
@@ -143,28 +143,28 @@
 }
 
 @layer components {
-  /* High-Contrast Button Variants */
+  /* Luxury Button Variants */
   .btn-luxury {
     @apply inline-flex items-center justify-center px-8 py-4 text-sm font-medium transition-all duration-300;
-    @apply bg-[hsl(var(--primary))] text-[hsl(var(--primary-foreground))] border border-[hsl(var(--border))];
-    @apply hover:opacity-90 hover:scale-105;
-    @apply focus:outline-none focus:ring-2 focus:ring-[hsl(var(--primary))] focus:ring-offset-2;
-    @apply rounded-full shadow-[var(--shadow-gray)] font-semibold tracking-wide;
+    @apply bg-gradient-to-r from-[hsl(var(--secondary-dark))] to-[hsl(var(--secondary))] text-[hsl(var(--primary))];
+    @apply hover:from-[hsl(var(--secondary))] hover:to-[hsl(var(--secondary-light))] hover:scale-105;
+    @apply focus:outline-none focus:ring-2 focus:ring-[hsl(var(--secondary))] focus:ring-offset-2;
+    @apply rounded-full shadow-[var(--shadow-gold)] font-semibold tracking-wide;
   }
 
   .btn-primary-luxury {
     @apply inline-flex items-center justify-center px-8 py-4 text-sm font-medium transition-all duration-300;
-    @apply bg-[hsl(var(--primary))] text-[hsl(var(--primary-foreground))];
-    @apply hover:opacity-90 hover:scale-105;
+    @apply bg-gradient-to-r from-[hsl(var(--primary))] to-[hsl(var(--primary-light))] text-[hsl(var(--primary-foreground))];
+    @apply hover:from-[hsl(var(--primary-dark))] hover:to-[hsl(var(--primary))] hover:scale-105;
     @apply focus:outline-none focus:ring-2 focus:ring-[hsl(var(--primary))] focus:ring-offset-2;
     @apply rounded-full shadow-[var(--shadow-luxury)] font-semibold tracking-wide;
   }
 
   .btn-outline-luxury {
     @apply inline-flex items-center justify-center px-8 py-4 text-sm font-medium transition-all duration-300;
-    @apply border-2 border-[hsl(var(--primary))] text-[hsl(var(--primary))] bg-[hsl(var(--background))];
-    @apply hover:bg-[hsl(var(--primary))] hover:text-[hsl(var(--primary-foreground))] hover:scale-105;
-    @apply focus:outline-none focus:ring-2 focus:ring-[hsl(var(--primary))] focus:ring-offset-2;
+    @apply border-2 border-[hsl(var(--secondary))] text-[hsl(var(--secondary))] bg-transparent;
+    @apply hover:bg-[hsl(var(--secondary))] hover:text-[hsl(var(--primary))] hover:scale-105;
+    @apply focus:outline-none focus:ring-2 focus:ring-[hsl(var(--secondary))] focus:ring-offset-2;
     @apply rounded-full font-semibold tracking-wide;
   }
 
@@ -191,7 +191,7 @@
   }
 
   .text-gold {
-    @apply text-[hsl(var(--primary))];
+    @apply bg-gradient-to-r from-[hsl(var(--secondary-dark))] to-[hsl(var(--secondary-light))] bg-clip-text text-transparent;
     font-weight: 600;
   }
 
@@ -223,6 +223,6 @@
 
   /* Hero Overlay */
   .hero-overlay {
-    background: linear-gradient(135deg, hsl(var(--primary) / 0.85) 0%, hsl(var(--secondary) / 0.75) 100%);
+    background: linear-gradient(135deg, hsl(var(--primary) / 0.85) 0%, hsl(var(--accent) / 0.75) 100%);
   }
 }

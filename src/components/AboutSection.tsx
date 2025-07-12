@@ -16,12 +16,12 @@ const AboutSection = () => {
           <div className="space-y-8">
             <div>
               <h2 className="heading-secondary mb-6">
-                Proudly <span className="text-primary">Moroccan</span>,
+                Proudly <span className="text-gold">Moroccan</span>,
                 <br />
-                Truly <span className="text-primary">International</span>
+                Truly <span className="text-accent">International</span>
               </h2>
               <p className="text-luxury">
-                For over two decades, Afinis Caftan has been at the forefront of Moroccan haute couture, 
+                For over two decades, Bouchra Filali Lahlou has been at the forefront of Moroccan haute couture, 
                 creating exquisite kaftans and traditional wear that celebrates our rich heritage while embracing 
                 contemporary elegance.
               </p>

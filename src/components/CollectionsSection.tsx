@@ -41,7 +41,7 @@ const CollectionsSection = () => {
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="heading-secondary mb-6">
-            Our <span className="text-primary">Exclusive</span> Collections
+            Our <span className="text-gold">Exclusive</span> Collections
           </h2>
           <p className="text-luxury max-w-3xl mx-auto">
             Discover the finest Moroccan fashion, where traditional craftsmanship meets contemporary luxury. 
@@ -62,7 +62,7 @@ const CollectionsSection = () => {
                 <img 
                   src={collection.image}
                   alt={collection.title}
-                  className="w-full h-80 object-cover transition-transform duration-700 group-hover:scale-110 grayscale hover:grayscale-0"
+                  className="w-full h-80 object-cover transition-transform duration-700 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                 <div className="absolute bottom-4 left-4 text-secondary opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-4 group-hover:translate-y-0">

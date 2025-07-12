@@ -31,10 +31,10 @@ const Navigation = () => {
             <Crown className="h-8 w-8 text-secondary" />
             <div>
               <h1 className="text-2xl font-bold text-primary" style={{ fontFamily: 'Montserrat' }}>
-                Afinis Caftan
+                Bouchra Filali Lahlou
               </h1>
               <p className="text-xs text-secondary font-medium tracking-wider">
-                TIMELESS ELEGANCE, MODERN STYLE
+                PROUDLY MOROCCAN, TRULY INTERNATIONAL
               </p>
             </div>
           </div>
