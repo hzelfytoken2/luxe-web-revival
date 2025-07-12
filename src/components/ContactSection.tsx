@@ -42,7 +42,7 @@ const ContactSection = () => {
     {
       icon: <Mail className="h-6 w-6" />,
       title: 'Email Us',
-      details: ['info@bouchrafilalilahlou.com', 'We reply within 24h']
+      details: ['info@afiniscaftan.com', 'We reply within 24h']
     }
   ];
 
@@ -52,7 +52,7 @@ const ContactSection = () => {
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="heading-secondary mb-6">
-            Get in <span className="text-gold">Touch</span>
+            Get in <span className="text-primary">Touch</span>
           </h2>
           <p className="text-luxury max-w-2xl mx-auto">
             Ready to create your perfect kaftan or have questions about our collections? 

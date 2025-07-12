@@ -7,7 +7,7 @@ const HeroSection = () => {
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Image */}
       <div 
-        className="absolute inset-0 parallax-bg"
+        className="absolute inset-0 parallax-bg grayscale"
         style={{
           backgroundImage: `url(${heroBg})`,
         }}
@@ -24,13 +24,13 @@ const HeroSection = () => {
           </p>
           
           <h1 className="heading-primary text-white mb-6">
-            Swarovski Crystal
+            Afinis Caftan
             <br />
-            <span className="text-gold">Embellishments</span>
+            <span className="text-white">Collection</span>
           </h1>
           
-          <p className="text-xl md:text-2xl text-cream mb-8 max-w-2xl mx-auto leading-relaxed">
-            Adorned With <span className="text-gold font-semibold">Precious Stones</span>
+          <p className="text-xl md:text-2xl text-white/90 mb-8 max-w-2xl mx-auto leading-relaxed">
+            Timeless <span className="text-white font-semibold">Moroccan Elegance</span>
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
