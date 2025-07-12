@@ -1,42 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;500;600&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* Luxury Moroccan Fashion Design System */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Core Brand Colors - Luxury Moroccan Palette */
+    --background: 41 44% 98%;
+    --foreground: 220 91% 8%;
 
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 220 91% 8%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 220 91% 8%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Primary: Deep Royal Blue */
+    --primary: 220 91% 18%;
+    --primary-foreground: 41 44% 98%;
+    --primary-light: 220 75% 35%;
+    --primary-dark: 220 100% 12%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Secondary: Luxury Gold */
+    --secondary: 43 74% 49%;
+    --secondary-foreground: 220 91% 8%;
+    --secondary-light: 45 86% 62%;
+    --secondary-dark: 40 65% 38%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    /* Accent: Rich Burgundy */
+    --accent: 345 100% 25%;
+    --accent-foreground: 41 44% 98%;
+    --accent-light: 345 85% 40%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    /* Neutral Tones */
+    --muted: 41 20% 94%;
+    --muted-foreground: 220 20% 45%;
 
-    --destructive: 0 84.2% 60.2%;
+    --cream: 41 44% 98%;
+    --warm-gray: 35 12% 85%;
+    --deep-gray: 220 15% 25%;
+
+    /* System Colors */
+    --destructive: 0 84% 60%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 35 20% 88%;
+    --input: 35 20% 88%;
+    --ring: 220 91% 18%;
 
-    --radius: 0.5rem;
+    --radius: 0.75rem;
+
+    /* Luxury Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-light)));
+    --gradient-secondary: linear-gradient(135deg, hsl(var(--secondary)), hsl(var(--secondary-light)));
+    --gradient-hero: linear-gradient(135deg, hsl(var(--primary) / 0.9), hsl(var(--accent) / 0.8));
+    --gradient-gold: linear-gradient(90deg, hsl(var(--secondary-dark)), hsl(var(--secondary)), hsl(var(--secondary-light)));
+    
+    /* Elegant Shadows */
+    --shadow-luxury: 0 25px 50px -12px hsl(var(--primary) / 0.25);
+    --shadow-gold: 0 20px 40px -10px hsl(var(--secondary) / 0.3);
+    --shadow-soft: 0 10px 30px -5px hsl(var(--deep-gray) / 0.1);
+    
+    /* Smooth Transitions */
+    --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-spring: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
 
     --sidebar-background: 0 0% 98%;
 
@@ -100,6 +130,99 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-sans;
+    font-family: 'Open Sans', system-ui, sans-serif;
+    scroll-behavior: smooth;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', system-ui, sans-serif;
+    font-weight: 500;
+    line-height: 1.2;
+  }
+}
+
+@layer components {
+  /* Luxury Button Variants */
+  .btn-luxury {
+    @apply inline-flex items-center justify-center px-8 py-4 text-sm font-medium transition-all duration-300;
+    @apply bg-gradient-to-r from-[hsl(var(--secondary-dark))] to-[hsl(var(--secondary))] text-[hsl(var(--primary))];
+    @apply hover:from-[hsl(var(--secondary))] hover:to-[hsl(var(--secondary-light))] hover:scale-105;
+    @apply focus:outline-none focus:ring-2 focus:ring-[hsl(var(--secondary))] focus:ring-offset-2;
+    @apply rounded-full shadow-[var(--shadow-gold)] font-semibold tracking-wide;
+  }
+
+  .btn-primary-luxury {
+    @apply inline-flex items-center justify-center px-8 py-4 text-sm font-medium transition-all duration-300;
+    @apply bg-gradient-to-r from-[hsl(var(--primary))] to-[hsl(var(--primary-light))] text-[hsl(var(--primary-foreground))];
+    @apply hover:from-[hsl(var(--primary-dark))] hover:to-[hsl(var(--primary))] hover:scale-105;
+    @apply focus:outline-none focus:ring-2 focus:ring-[hsl(var(--primary))] focus:ring-offset-2;
+    @apply rounded-full shadow-[var(--shadow-luxury)] font-semibold tracking-wide;
+  }
+
+  .btn-outline-luxury {
+    @apply inline-flex items-center justify-center px-8 py-4 text-sm font-medium transition-all duration-300;
+    @apply border-2 border-[hsl(var(--secondary))] text-[hsl(var(--secondary))] bg-transparent;
+    @apply hover:bg-[hsl(var(--secondary))] hover:text-[hsl(var(--primary))] hover:scale-105;
+    @apply focus:outline-none focus:ring-2 focus:ring-[hsl(var(--secondary))] focus:ring-offset-2;
+    @apply rounded-full font-semibold tracking-wide;
+  }
+
+  /* Elegant Cards */
+  .card-luxury {
+    @apply bg-white rounded-2xl shadow-[var(--shadow-soft)] border border-[hsl(var(--border))];
+    @apply transition-all duration-500 hover:shadow-[var(--shadow-luxury)] hover:-translate-y-2;
+    @apply p-8 backdrop-blur-sm;
+  }
+
+  /* Premium Typography */
+  .heading-primary {
+    @apply text-5xl md:text-7xl font-bold text-[hsl(var(--primary))] leading-tight;
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  .heading-secondary {
+    @apply text-3xl md:text-4xl font-semibold text-[hsl(var(--primary))] leading-tight;
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  .text-luxury {
+    @apply text-lg text-[hsl(var(--muted-foreground))] leading-relaxed;
+  }
+
+  .text-gold {
+    @apply bg-gradient-to-r from-[hsl(var(--secondary-dark))] to-[hsl(var(--secondary-light))] bg-clip-text text-transparent;
+    font-weight: 600;
+  }
+
+  /* Smooth Animations */
+  .fade-in {
+    @apply opacity-0 translate-y-6 transition-all duration-700 ease-out;
+  }
+
+  .fade-in-visible {
+    @apply opacity-100 translate-y-0;
+  }
+
+  .parallax-bg {
+    @apply bg-fixed bg-center bg-cover bg-no-repeat;
+  }
+
+  /* Navigation */
+  .nav-luxury {
+    @apply backdrop-blur-md bg-white/95 border-b border-[hsl(var(--border))];
+    @apply sticky top-0 z-50 transition-all duration-300;
+  }
+
+  /* Form Elements */
+  .input-luxury {
+    @apply w-full px-4 py-3 border border-[hsl(var(--border))] rounded-lg;
+    @apply focus:outline-none focus:ring-2 focus:ring-[hsl(var(--secondary))] focus:border-[hsl(var(--secondary))];
+    @apply transition-all duration-300 bg-white;
+  }
+
+  /* Hero Overlay */
+  .hero-overlay {
+    background: linear-gradient(135deg, hsl(var(--primary) / 0.85) 0%, hsl(var(--accent) / 0.75) 100%);
   }
 }
