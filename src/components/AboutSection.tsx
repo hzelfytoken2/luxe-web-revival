@@ -71,12 +71,12 @@ const AboutSection = () => {
           {/* Image */}
           <div className="relative">
             <div className="relative rounded-2xl overflow-hidden shadow-[var(--shadow-luxury)]">
-              <div className="aspect-[4/5] bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center">
-                <div className="text-center text-primary/60">
-                  <Crown className="h-16 w-16 mx-auto mb-4" />
-                  <p className="text-lg font-medium">Artisan at Work</p>
-                  <p className="text-sm">Master Craftsperson</p>
-                </div>
+              <div className="aspect-[4/5] overflow-hidden">
+                <img 
+                  src="/lovable-uploads/9855c1d7-453a-444b-979a-d17b5226978f.png" 
+                  alt="Afinis Caftan Store" 
+                  className="w-full h-full object-cover"
+                />
               </div>
             </div>
 
