@@ -19,19 +19,13 @@ const HeroSection = () => {
       {/* Content */}
       <div className="relative z-10 text-center max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="fade-in fade-in-visible">
-          <p className="text-secondary-light font-medium tracking-widest uppercase mb-4 text-sm md:text-base">
-            Time to bag the best of Moroccan Dress
-          </p>
-          
-          <h1 className="heading-primary text-white mb-6">
-            Swarovski Crystal
-            <br />
-            <span className="text-gold">Embellishments</span>
-          </h1>
-          
-          <p className="text-xl md:text-2xl text-cream mb-8 max-w-2xl mx-auto leading-relaxed">
-            Adorned With <span className="text-gold font-semibold">Precious Stones</span>
-          </p>
+          <div className="mb-8">
+            <img 
+              src="/lovable-uploads/c2322f86-608f-408f-8179-5a9f3d63175f.png" 
+              alt="Afinis Logo" 
+              className="mx-auto max-w-xs md:max-w-sm h-auto"
+            />
+          </div>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Button className="btn-luxury group">
