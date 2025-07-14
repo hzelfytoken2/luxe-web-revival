@@ -10,16 +10,7 @@ const Footer = () => {
 
   const companyLinks = [
     { label: 'About Us', href: '#about' },
-    { label: 'Our Story', href: '#about' },
-    { label: 'Showroom', href: '#contact' },
     { label: 'Contact', href: '#contact' },
-  ];
-
-  const supportLinks = [
-    { label: 'Size Guide', href: '#' },
-    { label: 'Shipping Info', href: '#' },
-    { label: 'Returns', href: '#' },
-    { label: 'Care Instructions', href: '#' },
   ];
 
   const socialLinks = [
@@ -33,7 +24,7 @@ const Footer = () => {
     <footer className="bg-primary text-primary-foreground">
       {/* Main Footer */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {/* Brand Section */}
           <div className="lg:col-span-1 space-y-6">
             <div className="flex items-center space-x-3">
@@ -107,39 +98,22 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Support & Social */}
+          {/* Social Links */}
           <div>
             <h4 className="text-lg font-semibold mb-6 text-secondary" style={{ fontFamily: 'Montserrat' }}>
-              Support
+              Follow Us
             </h4>
-            <ul className="space-y-3 mb-8">
-              {supportLinks.map((link) => (
-                <li key={link.label}>
-                  <a 
-                    href={link.href}
-                    className="text-primary-foreground/80 hover:text-secondary transition-colors duration-300"
-                  >
-                    {link.label}
-                  </a>
-                </li>
+            <div className="flex space-x-4">
+              {socialLinks.map((social) => (
+                <a
+                  key={social.label}
+                  href={social.href}
+                  className="bg-primary-light/20 p-3 rounded-full hover:bg-secondary hover:text-primary transition-all duration-300 hover:scale-110"
+                  aria-label={social.label}
+                >
+                  {social.icon}
+                </a>
               ))}
-            </ul>
-
-            {/* Social Links */}
-            <div>
-              <h5 className="text-sm font-semibold mb-4 text-secondary">Follow Us</h5>
-              <div className="flex space-x-4">
-                {socialLinks.map((social) => (
-                  <a
-                    key={social.label}
-                    href={social.href}
-                    className="bg-primary-light/20 p-3 rounded-full hover:bg-secondary hover:text-primary transition-all duration-300 hover:scale-110"
-                    aria-label={social.label}
-                  >
-                    {social.icon}
-                  </a>
-                ))}
-              </div>
             </div>
           </div>
         </div>
