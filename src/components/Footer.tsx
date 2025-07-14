@@ -39,7 +39,7 @@ const Footer = () => {
               <Crown className="h-8 w-8 text-secondary" />
               <div>
                 <h3 className="text-xl font-bold" style={{ fontFamily: 'Montserrat' }}>
-                  Bouchra Filali Lahlou
+                  Afinis Caftan
                 </h3>
                 <p className="text-xs text-secondary tracking-wider">
                   PROUDLY MOROCCAN
@@ -149,7 +149,7 @@ const Footer = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <div className="text-sm text-primary-foreground/60">
-              © 2024 Bouchra Filali Lahlou. All rights reserved.
+              © 2024 Afinis Caftan. All rights reserved.
             </div>
             <div className="flex space-x-6 text-sm">
               <a href="#" className="text-primary-foreground/60 hover:text-secondary transition-colors">
