@@ -1,6 +1,7 @@
 import { Crown, Instagram, Mail, MapPin, MessageCircle, Phone, Video } from 'lucide-react';
 
 const Footer = () => {
+  // Footer component updated - cache refresh
   const quickLinks = [
     { label: 'Shop Kaftans', href: '#collections' },
     { label: 'Shop Djellabas', href: '#collections' },
