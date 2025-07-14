@@ -1,4 +1,4 @@
-import { Crown, Facebook, Instagram, Mail, MapPin, Phone } from 'lucide-react';
+import { Crown, Instagram, Mail, MapPin, MessageCircle, Phone, Video } from 'lucide-react';
 
 const Footer = () => {
   const quickLinks = [
@@ -23,9 +23,10 @@ const Footer = () => {
   ];
 
   const socialLinks = [
-    { icon: <Instagram className="h-5 w-5" />, href: '#', label: 'Instagram' },
-    { icon: <Facebook className="h-5 w-5" />, href: '#', label: 'Facebook' },
-    { icon: <Mail className="h-5 w-5" />, href: '#', label: 'Email' },
+    { icon: <Mail className="h-5 w-5" />, href: 'mailto:afinisfashion@gmail.com', label: 'Gmail' },
+    { icon: <Instagram className="h-5 w-5" />, href: 'https://www.instagram.com/afiniscaftan', label: 'Instagram' },
+    { icon: <Video className="h-5 w-5" />, href: 'https://www.tiktok.com/@afiniscaftans', label: 'TikTok' },
+    { icon: <MessageCircle className="h-5 w-5" />, href: 'https://api.whatsapp.com/send/?phone=212661604528&text&type=phone_number&app_absent=0', label: 'WhatsApp' },
   ];
 
   return (
@@ -59,11 +60,11 @@ const Footer = () => {
               </div>
               <div className="flex items-center space-x-3 text-sm">
                 <Phone className="h-4 w-4 text-secondary" />
-                <span>+212 522 XXX XXX</span>
+                <span>+212 661-604528</span>
               </div>
               <div className="flex items-center space-x-3 text-sm">
                 <Mail className="h-4 w-4 text-secondary" />
-                <span>info@bouchrafilalilahlou.com</span>
+                <span>afinisfashion@gmail.com</span>
               </div>
             </div>
           </div>
