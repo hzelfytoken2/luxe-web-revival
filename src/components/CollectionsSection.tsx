@@ -1,8 +1,9 @@
 import { ArrowRight, Crown, Gem, Sparkles } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import collection1 from '@/assets/collection-1.jpg';
-import collection2 from '@/assets/collection-2.jpg';
-import collection3 from '@/assets/collection-3.jpg';
+import { Link } from 'react-router-dom';
+const kaftan1 = '/lovable-uploads/bf54b2a7-ef19-4e33-ab6f-c058fa8d0d1f.png';
+const djellaba1 = '/lovable-uploads/0f1d0875-35ab-48ea-b009-a2229e63467d.png';
+const bridal1 = '/lovable-uploads/90cde7de-9e8f-4ecb-a5f7-199eb8b1e8fd.png';
 
 const CollectionsSection = () => {
   const collections = [
@@ -10,28 +11,31 @@ const CollectionsSection = () => {
       id: 1,
       title: 'Luxury Kaftan Collection',
       description: 'Exquisite hand-embroidered kaftans with Swarovski crystals and gold threadwork',
-      image: collection1,
+      image: kaftan1,
       icon: <Crown className="h-8 w-8" />,
       features: ['Swarovski Crystals', 'Gold Embroidery', 'Premium Silk'],
-      cta: 'Shop Kaftans'
+      cta: 'Shop Kaftans',
+      link: '/kaftans'
     },
     {
       id: 2,
       title: 'Traditional Djellaba',
       description: 'Timeless Moroccan robes crafted with authentic techniques and modern elegance',
-      image: collection2,
+      image: djellaba1,
       icon: <Sparkles className="h-8 w-8" />,
       features: ['Traditional Design', 'Premium Cotton', 'Modern Fit'],
-      cta: 'Shop Djellabas'
+      cta: 'Shop Djellabas',
+      link: '/djellabas'
     },
     {
       id: 3,
       title: 'Bridal Takchita',
       description: 'Ceremonial masterpieces for your special day, adorned with precious stones',
-      image: collection3,
+      image: bridal1,
       icon: <Gem className="h-8 w-8" />,
       features: ['Bridal Exclusive', 'Precious Stones', 'Custom Sizing'],
-      cta: 'Bridal Collection'
+      cta: 'Bridal Collection',
+      link: '/bridal'
     }
   ];
 
@@ -93,10 +97,12 @@ const CollectionsSection = () => {
                 </div>
 
                 {/* CTA */}
-                <Button className="btn-primary-luxury w-full group">
-                  {collection.cta}
-                  <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-                </Button>
+                <Link to={collection.link}>
+                  <Button className="btn-primary-luxury w-full group">
+                    {collection.cta}
+                    <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                  </Button>
+                </Link>
               </div>
             </div>
           ))}
